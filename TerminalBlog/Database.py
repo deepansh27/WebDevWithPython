@@ -34,6 +34,6 @@ Find the process using port 8080:
 sudo lsof -i:8080
 Kill it:
 
-kill XXXX
+kill 'the task name'
 
 '''

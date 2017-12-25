@@ -13,10 +13,6 @@ class Post(object):
        self.title = title
        self.contents = contents
 
-
-
-
-
    def save_to_mongo (self):
        Database.insert('posts', self.return_json())
 
@@ -39,12 +35,10 @@ class Post(object):
         # Post.from_mongo('123')
         return Database.find_one('posts', query={'post_id': id})
 
+
    @staticmethod
    def from_blog(id):
         return [post for post in Database.find('posts', query= {'blog_id':id})]
-
-
-
 
 
 

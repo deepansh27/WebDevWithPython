@@ -19,7 +19,9 @@ post1 = Post(blog_id='555',
 post.save_to_mongo()
 post1.save_to_mongo()
 
+post = Post.from_blog('555')
+print(post)
 '''
 
-post = Post.from_blog('555')
+post = Post.from_mongo('')
 print(post)
