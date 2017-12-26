@@ -7,6 +7,7 @@ from menu import Menu
 Database.initialize()
 
 '''
+
 post = Post(blog_id='123',
             title="Deepansh's great books",
             contents= "This containts blog by deepansh parab",

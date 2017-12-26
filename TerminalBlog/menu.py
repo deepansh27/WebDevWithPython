@@ -3,6 +3,7 @@ import models.blog
 from Database import Database
 
 class Menu(object):
+
     def __init__(self):
         # Ask the user for author name
 
@@ -34,26 +35,19 @@ class Menu(object):
         blog.save_to_mongo()
         self.user_blog = blog
 
-
-
-
     def run_menu(self):
         # Ask user if its will read or write a blog?
         user_input = 'C'
         while user_input == 'C':
             read_or_write = raw_input("Do you want to read(R) or write(W) blogs?: ")
 
-
-            # if read:
-
+            # if read :
             # allow user to pick one
             # display posts
             if read_or_write == 'R':
                 # list all the blogs in from the database
                 self._list_blogs()
                 self._view_blogs()
-
-
 
             elif read_or_write == 'W':
                 # check if the user has a blog

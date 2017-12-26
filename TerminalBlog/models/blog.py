@@ -28,8 +28,6 @@ class Blog(object):
                     date= date )
         post.save_to_mongo()
 
-
-
     def get_posts(self):
         return Post.from_blog(self.id)
 
