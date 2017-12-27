@@ -1,7 +1,7 @@
 import uuid
 from post import Post
 import datetime
-from Database import Database
+from database import Database
 
 class Blog(object):
 

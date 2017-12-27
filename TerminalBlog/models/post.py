@@ -1,5 +1,5 @@
 
-from Database import Database
+from database import Database
 import uuid
 import datetime
 
@@ -14,9 +14,7 @@ class Post(object):
        self.contents = contents
 
    def save_to_mongo (self):
-       Database.insert('posts', self.return_json())
-
-
+       Database.insert(collection='posts', query=self.return_json())
 
 
    def return_json(self):

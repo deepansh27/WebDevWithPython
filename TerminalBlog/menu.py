@@ -1,6 +1,6 @@
 from models.blog import Blog
 import models.blog
-from Database import Database
+from database import Database
 
 class Menu(object):
 

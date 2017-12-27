@@ -1,6 +1,6 @@
 from models.post import Post
 import pymongo
-from Database import Database
+from database import Database
 
 from models.blog import Blog
 from menu import Menu
