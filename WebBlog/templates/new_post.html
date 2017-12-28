@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{%  block content %}
+<div class="container">
+    <form id="new-blog" action="/posts/new/{{ blog_id }}" method="post">
+      <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" name="title" aria-describedby="emailHelp" placeholder="Enter title">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="content">Content</label>
+    <input type="text" class="form-control" id="content" name="content" placeholder="Enter Content ">
+  </div>
+
+  <button type="submit" id="submit-button" class="btn btn-primary">create post</button>
+</form>
+</div>
+{% endblock %}
+

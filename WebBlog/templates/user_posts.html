@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{%  block content %}
+
+<div class="container">
+    <h2> {{blog_name}}'s blogs</h2>
+     <a href="/posts/new/{{ blog_id }}"> <button type="submit" id="submit-button" class="btn btn-primary">click </button> </a>
+    <hr>
+    <hr>
+    {% if posts|length > 0 %}
+        {% for post in posts %}
+            <h3>{{ post.title }}</h3>
+            <p> posted by author {{ post.author }} </p>
+            <p>     {{ post.content }}</p>
+            <hr>
+        {% endfor %}
+    {% else %}
+        <h4>There aren't any post yet...!</h4>
+
+    {% endif %}
+    <label for="submit-button">click the button to create a new post</label>
+
+</div>
+{% endblock %}
+
